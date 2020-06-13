@@ -1,0 +1,12 @@
+{
+  "name": "deno_flutter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "deno run --allow-read --allow-write --allow-env --allow-net ./src/main.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
