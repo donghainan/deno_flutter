@@ -1,4 +1,4 @@
-const baseUrl = 'xxx/domain/';
+const baseUrl = 'http://www.wanandroid.com/';
 const servicePath = {
-  'homePageContent': baseUrl + 'homePageContent'
+  'homePageContent': baseUrl + 'article/list/0/json'
 };

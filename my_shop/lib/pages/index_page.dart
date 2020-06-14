@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import '../sevices/service_method.dart';
-import '../api/http_util.dart';
 
 class IndexPage extends StatefulWidget {
   IndexPage({Key key}) : super(key: key);
@@ -16,20 +15,16 @@ class _IndexPageState extends State<IndexPage> {
   @override
   void initState() {
     // TODO: implement initState
+    getHomePageContent().then((data) {
+      setState(() {
+        curPage = data['curPage'];
+      });
+    });
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    Http.getInstance().get(
-      'http://www.wanandroid.com/article/list/0/json',
-      (data) {
-        print(data);
-        setState(() {
-          curPage = data.curPage;
-        });
-      },
-    );
     return Scaffold(
       appBar: AppBar(
         title: Text("天下无购"),
